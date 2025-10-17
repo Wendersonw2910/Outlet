@@ -23,4 +23,10 @@ public class OutletRepository {
         clientes.add(new Cliente("Camila", "Fernandes", 29, "Rua J, 707", 31933221100L));
     }
     public List<Cliente> allClientes(){return clientes;}
+
+    public String addCliente(Cliente cliente){
+        clientes.add(cliente);
+        return "Cliente adicionado com sucesso!";
+
+    }
 }

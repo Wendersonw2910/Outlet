@@ -13,4 +13,5 @@ public class OutletService {
     OutletRepository outletRepository;
     //alteração projeto
     public List<Cliente> allClientes(){return outletRepository.allClientes();}
+    public String addClienteService(Cliente cliente){return outletRepository.addCliente(cliente);}
 }
