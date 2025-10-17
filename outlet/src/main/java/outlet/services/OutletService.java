@@ -11,5 +11,6 @@ import java.util.List;
 public class OutletService {
     @Autowired
     OutletRepository outletRepository;
+    //alteração projeto
     public List<Cliente> allClientes(){return outletRepository.allClientes();}
 }
