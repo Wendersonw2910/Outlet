@@ -29,4 +29,14 @@ public class OutletRepository {
         return "Cliente adicionado com sucesso!";
 
     }
+    public Cliente findCliente(String nome) {
+        for (int i = 0; i <= clientes.size(); i++) {
+            if (clientes.get(i).getNome().equalsIgnoreCase(nome)){
+                return clientes.get(i);
+            }
+        }
+        return null;
+    }
+
 }
+
