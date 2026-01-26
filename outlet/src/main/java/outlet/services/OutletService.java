@@ -16,6 +16,12 @@ public class OutletService {
     public String addClienteService(Cliente cliente){return outletRepository.addCliente(cliente);}
     //Metodo(findCliente) retorna(Cliente) parametro(nome do tipo String)
     public Cliente findCliente(String nome) {return outletRepository.findCliente(nome);}
+    public String deleteCliente (String nome) {return outletRepository.deleteCliente(nome);}
+    public String updateCliente (String nome, String endereço, long telefone) {
+    return outletRepository.updateCliente(nome, endereço, telefone);
+    }
+
 }
+
 
 

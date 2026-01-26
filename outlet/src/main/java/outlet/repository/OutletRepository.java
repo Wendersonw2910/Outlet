@@ -37,6 +37,29 @@ public class OutletRepository {
         }
         return null;
     }
+    public String deleteCliente(String nome){
+        Cliente cliente = findCliente(nome);
+        boolean isRemoved =clientes.remove(cliente);
+        if (isRemoved){
+            return "Cliente removido com sucesso!";
+        } else{
+            return "Cliente inexistente";
 
+        }
+    }
+    public String updateCliente(String nome, String endereço, long telefone){
+        Cliente cliente = findCliente(nome);
+        int indexOfClient =clientes.indexOf(cliente);
+        cliente.setEndereço(endereço);
+        cliente.setTelefone(telefone);
+        clientes.remove(indexOfClient);
+        boolean isAdd=clientes.add(cliente);
+        if (isAdd){
+            return "Atualizado com sucesso!";
+        } else{
+            return "Não foi possivel atualizar";
+        }
+    }
 }
+
 
