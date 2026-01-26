@@ -18,4 +18,8 @@ public class OutletControler {
     public String addCliente(@RequestBody Cliente cliente){return outletService.addClienteService(cliente);}
     @PostMapping("/procurarCliente")
     public Cliente findCLiente(@RequestParam String nome) {return outletService.findCliente(nome);}
+    @PostMapping ("/deleteClient")
+    public String deleteCliente (@RequestParam String nome) {return outletService.deleteCliente(nome);}
+    @PostMapping ("/updateClient")
+    public String updateCliente (@RequestParam String nome, @RequestParam String endereço, @RequestParam long telefone){return outletService.updateCliente(nome,endereço, telefone);}
 }
